@@ -43,7 +43,7 @@ Login Fails การเข้าสู่ระบบด้วยอีเม�
 Login Fails  อีเมลอาจไม่ใช่รูปแบบอีเมลหรือไม่ใช่แอดมิน
     Open Browser    ${LOGIN_URL}    ${BROWSER}
     Wait Until Element Is Visible    ${EMAIL_INPUT}    10s
-    Input Text    ${EMAIL_INPUT}      test1234    # รูปแบบไม่ใช่อีเมล → จะโดน HTML5 block
+    Input Text    ${EMAIL_INPUT}      test1234   
     Input Text    ${PASSWORD_INPUT}   1234
     Click Element    ${LOGIN_BUTTON}
     Page Should Contain Element    css=input[type="email"]:invalid
