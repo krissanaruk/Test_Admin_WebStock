@@ -3,7 +3,7 @@ Library    SeleniumLibrary    run_on_failure=Capture Page Screenshot
 Suite Setup    Set Screenshot Directory    ${OUTPUT DIR}${/}screenshots
 
 *** Variables ***
-${BROWSER}              Chrome
+${BROWSER}              firefox
 ${LOGIN_URL}            http://localhost:3001/
 ${OVERVIEW_URL}         http://localhost:3001/dashboard
 ${EMAIL_INPUT}          xpath=//*[@id="root"]/div/div/form/input[1]
@@ -22,7 +22,7 @@ Login Success ตรวจสอบการเข้าสู่ระบบด
     Open Browser    ${LOGIN_URL}    ${BROWSER}
     Wait Until Element Is Visible    ${EMAIL_INPUT}    10s
     Input Text    ${EMAIL_INPUT}      ${VALID_EMAIL}
-    Input Password    ${PASSWORD_INPUT}   ${VALID_PASSWORD}
+    Input Text    ${PASSWORD_INPUT}   ${VALID_PASSWORD}
     Click Element    ${LOGIN_BUTTON}
     ${alert_text}=    Handle Alert    ACCEPT    timeout=5s
     Should Be Equal    ${alert_text}    เข้าสู่ระบบแอดมินสำเร็จ

@@ -29,7 +29,7 @@ ${VALID_PASSWORD}               1234
 
 
 *** Test Cases ***
-Select Country Sucess เลือกประเทศเเละindicatorอยู่ครบ
+Select Country Sucess ตรวจสอบการแสดงผลของindicatorและสัญญาณซื้อขายที่ปกติหลังเลือกประเทศ
     [Setup]    Login And Go To Dashboard
     Wait Until Element Is Visible    ${COUNTRY_SELECT}    10s
     Wait Until Element Is Visible    ${STOCK_SELECT}      10s
@@ -58,7 +58,7 @@ Select Country Sucess เลือกประเทศเเละindicatorอ�
 
 
 *** Test Cases ***
-Select Stocksymbol Sucess เลือกประเทศ + เลือกหุ้น เเละ indicator อยู่ครบ
+Select Stocksymbol Sucess ตรวจสอบการแสดงผลของindicatorและสัญญาณซื้อขายที่ปกติหลังเลือกประเทศและหุ้น
     [Setup]    Login And Go To Dashboard
     Wait Until Element Is Visible    ${COUNTRY_SELECT}    10s
     Wait Until Element Is Visible    ${STOCK_SELECT}      10s
@@ -73,7 +73,7 @@ Select Stocksymbol Sucess เลือกประเทศ + เลือกห
 
     Close Browser
 
-Select Timeframe  Sucess เลือกประเทศ + เลือกหุ้น + เลือกเวลา แล้วตรวจ Indicator ครบ
+Select Timeframe  Sucess ตรวจสอบการแสดงผลของindicatorและสัญญาณซื้อขายที่ปกติหลังเลือกประเทศ, หุ้น และ ช่วงเวลา
     [Setup]    Login And Go To Dashboard
     Wait Until Element Is Visible    ${COUNTRY_SELECT}    10s
     Wait Until Element Is Visible    ${STOCK_SELECT}      10s

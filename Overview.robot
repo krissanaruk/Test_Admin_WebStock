@@ -25,7 +25,7 @@ ${VALID_PASSWORD}       1234
 
 
 *** Test Cases ***
-Select Country Sucess สลับประเทศแล้วกราฟยังแสดงปกติ
+Select Country Sucess ตรวจสอบการแสดงผลของกราฟที่ปกติหลังจากเลือกประเทศ
     [Setup]    Login And Go To Dashboard
     Wait Until Page Contains Element    ${COUNTRY_SELECT}       10s
     Wait Until Page Contains Element    ${CHART_CONTAINER}      10s
@@ -41,7 +41,7 @@ Select Country Sucess สลับประเทศแล้วกราฟย�
 
 
 *** Test Cases ***
-Select Stock Symbol Success สลับประเทศ + สัญลักษณ์หุ้นแล้วกราฟยังแสดงปกติ
+Select Stock Symbol Success ตรวจสอบการแสดงผลของกราฟที่ปกติหลังจากเลือกประเทศและหุ้น
     [Setup]    Login And Go To Dashboard
     Wait Until Page Contains Element    ${COUNTRY_SELECT}       10s
     Wait Until Page Contains Element    ${STOCK_SELECT}         10s
@@ -142,7 +142,7 @@ Select Stock Symbol Success สลับประเทศ + สัญลัก�
     Close Browser
 
 *** Test Cases ***
-Select Timeframre Sucess สลับประเทศ + สัญลักษณ์หุ้น + ช่วงเวลา แล้วกราฟต้องยังแสดงปกติ
+Select Timeframre Sucess ตรวจสอบการแสดงผลของกราฟที่ปกติหลังจากเลือกประเทศ, หุ้น และ ช่วงเวลา
     [Setup]    Login And Go To Dashboard
     Wait Until Page Contains Element    ${COUNTRY_SELECT}       10s
     Wait Until Page Contains Element    ${STOCK_SELECT}         10s
@@ -264,7 +264,7 @@ Select Timeframre Sucess สลับประเทศ + สัญลักษ�
     Close Browser
 
 *** Test Cases ***
-Select Top gainer/loser Sucess สลับประเทศ + ช่วงเวลา เพื่อดู Top gainer, Loser
+Select Top gainer/loser Sucess ตรวจสอบการแสดงผลกำไรขาดทุนที่ปกติ หลังจากเลือกประเทศ, หุ้น และ ช่วงเวลา
     [Setup]    Login And Go To Dashboard
     Wait Until Element Is Visible       ${COUNTRY_SELECT}       10s
     Wait Until Element Is Visible       xpath=${TIME_BUTTONS_ROOT}//button[normalize-space()='5D']      10s

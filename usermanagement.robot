@@ -19,10 +19,10 @@ ${VALID_EMAIL}          kittipob.jir@rmutto.ac.th
 ${VALID_PASSWORD}       1234
 ${VALID_EDIT_USER}      StockMaster_RealXD123
 ${VALID_EDIT_EMAIL}     testUser123@gmail.com
-${INVALID_EDIT_EMAIL}     testUser123@12345gmail.com
+${INVALID_EDIT_EMAIL}      testUser123gmail.com
 
 *** Test Cases ***
-View User information ดูข้อมูลผู้ใช้
+View User information ตรวจสอบการดูข้อมูลผู้ใช้ที่ถูกต้อง
     [Setup]    Login And Go To Dashboard
     
     Click Element   xpath=//*[@id="root"]/div/div[2]/div/div/table/tbody/tr[1]/td[4]/button[1]
@@ -33,7 +33,7 @@ View User information ดูข้อมูลผู้ใช้
 
     Close Browser
 
-Edit User information Success เเก้ไขชื่อเเละอีเมลผู้ใช้
+Edit User information Success ตรวจสอบการแก้ไขข้อมูลผู้ใช้ที่ถูกต้อง
     [Setup]    Login And Go To Dashboard
 
     Click Element   xpath=//*[@id="root"]/div/div[2]/div/div/table/tbody/tr[2]/td[4]/button[2]
@@ -51,7 +51,7 @@ Edit User information Success เเก้ไขชื่อเเละอี�
 
     Close Browser
 
-Edit User information Fails เเก้ไขอีเมลที่ผิดฟอร์เเมท
+Edit User information Fails ตรวจสอบการแก้ไขข้อมูลผู้ใช้ด้วยอีเมลที่ผิดฟอร์แมต
     [Setup]    Login And Go To Dashboard
     Click Element   xpath=//*[@id="root"]/div/div[2]/div/div/table/tbody/tr[2]/td[4]/button[2]
     Wait Until Element Is Visible     ${MANAGEUSER_INPUT}     10s
@@ -67,7 +67,7 @@ Edit User information Fails เเก้ไขอีเมลที่ผิด�
 
     Close Browser
 
-suspend User information Success ระงับบัญชีผู้ใช้ชั่วคราวสำเร็จ
+suspend User information Success ตรวจสอบการระงับบัญชีผู้ใช้ชั่วคราว
     [Setup]    Login And Go To Dashboard
     Wait Until Element Is Visible   xpath=//*[@id="root"]/div/div[2]/div/header[normalize-space()='User Management']      
     Wait Until Element Is Visible   xpath=//*[@id="root"]/div/div[2]/div/div/table/tbody/tr[3]/td[3]/span[normalize-space()='Active']     10s  
